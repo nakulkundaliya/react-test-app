@@ -1,0 +1,28 @@
+.App{
+  position: relative;
+}
+.content {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.input {
+  height: 20px;
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+.submit{
+  height: 45px;
+  width: 100px;
+  margin: 7px;
+  background-color: aquamarine;
+}

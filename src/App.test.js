@@ -2,9 +2,11 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import { createMemoryHistory } from "history";
-import { Router } from "react-router";
+import { Router, MemoryRouter } from "react-router";
 import App from './App';
 import Home from '../src/container/home';
+import Projects from '../src/container/projects';
+import ProjectDetails from '../src/container/project-details';
 import NotFound from '../src/container/not-found'
 let wrapped = shallow(<App />);
 describe('render App ', () => {
@@ -12,16 +14,8 @@ describe('render App ', () => {
     expect(wrapped).toMatchSnapshot();
   });
 
-  it('valid path should not redirect to 404', () => {
-    const history = createMemoryHistory();
-
-    const wrapper = mount(
-      <Router history={history}>
-        <App />
-      </Router>,
-    );
-    expect(history.location.pathname).toBe("/");
-
+  it('render home component', () => {
+    expect(wrapped.find('Route[exact=true][path="/"]').first().prop('component')).toBe(Home);
   });
 
 });

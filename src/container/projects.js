@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import API from '../utils/api-services'
 import '../App.css';
 import Header from '../component/header';
@@ -40,4 +40,4 @@ const Projects = (props) => {
   );
 }
 
-export default Projects;
+export default withRouter(Projects);

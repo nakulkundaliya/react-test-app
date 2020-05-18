@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import '../App.css';
 
-const Home = () => {
-  const history = useHistory();
+const Home = ({ history}) => {
   const [username, setUsername] = useState();
 
   const submitForm = () => {
@@ -35,4 +34,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default withRouter(Home);

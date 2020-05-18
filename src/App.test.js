@@ -14,8 +14,15 @@ describe('render App ', () => {
     expect(wrapped).toMatchSnapshot();
   });
 
+
   it('render home component', () => {
-    expect(wrapped.find('Route[exact=true][path="/"]').first().prop('component')).toBe(Home);
-  });
+    const wrapper = mount(
+      <MemoryRouter initialEntries={[ '/' ]}>
+        <App/>
+      </MemoryRouter>
+    );
+    expect(wrapper.find(Home)).toHaveLength(1);
+
+  })
 
 });

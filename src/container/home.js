@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory, withRouter } from 'react-router-dom';
 import '../App.css';
 
-const Home = ({ history}) => {
+const Home = ({ history }) => {
   const [username, setUsername] = useState();
 
   const submitForm = () => {
@@ -22,6 +22,7 @@ const Home = ({ history}) => {
         <input
           className="input"
           type="text"
+          name="username"
           placeholder="Enter username"
           value={username}
           onChange={changeUsername} />
@@ -34,4 +35,4 @@ const Home = ({ history}) => {
   );
 }
 
-export default withRouter(Home);
+export default Home;

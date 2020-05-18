@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import {  withRouter } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown'
 
 import API from '../utils/api-services'
@@ -34,4 +33,4 @@ const ProjectDetails = (props) => {
   );
 }
 
-export default withRouter(ProjectDetails);
+export default ProjectDetails;

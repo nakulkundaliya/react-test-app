@@ -11,13 +11,14 @@ import NotFound from './container/not-found'
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/:name" component={Projects} />
-        <Route exact path="/:name/:projectid" component={ProjectDetails} />
-        <Route exact component={NotFound} />
-      </Switch>
-
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/:name" component={Projects} />
+          <Route exact path="/:name/:projectid" component={ProjectDetails} />
+          <Route exact component={NotFound} />
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }
